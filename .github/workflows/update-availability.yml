@@ -2,7 +2,8 @@ name: Update Availability JSON
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # Draai elke 10 minuten
+    - cron: '*/10 * * * *'
   workflow_dispatch: {}
 
 jobs:
