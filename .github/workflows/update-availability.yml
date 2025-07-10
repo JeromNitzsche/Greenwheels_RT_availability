@@ -1,12 +1,10 @@
 name: Update Availability JSON
 
-# Zorg dat de workflow push-permissies heeft
 permissions:
   contents: write
 
 on:
   schedule:
-    # Draai elke 10 minuten
     - cron: '*/10 * * * *'
   workflow_dispatch: {}
 
@@ -17,9 +15,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-        with:
-          # persist-credentials zorgt dat GITHUB_TOKEN in git-config blijft staan
-          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -31,13 +26,12 @@ jobs:
           pip install --no-cache-dir -r requirements.txt
           python main.py
 
-      - name: Commit availability.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add availability/availability.json
-          git diff --quiet && echo "No changes to commit" || git commit -m "Update availability $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-
-      - name: Push to GitHub Pages branch
-        run: |
-          git push origin HEAD:gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./availability
+          publish_branch: gh-pages
+          keep_files: false
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
