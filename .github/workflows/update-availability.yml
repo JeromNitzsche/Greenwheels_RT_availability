@@ -1,0 +1,38 @@
+name: Update Availability JSON
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies & generate JSON
+        run: |
+          pip install --no-cache-dir -r requirements.txt
+          python main.py
+
+      - name: Commit availability.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add availability/availability.json
+          git diff --quiet && echo "No changes to commit" || git commit -m "Update availability $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+      - name: Push to GitHub Pages branch
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          directory: availability
