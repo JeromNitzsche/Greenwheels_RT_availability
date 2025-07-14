@@ -1121,7 +1121,7 @@
   },
   "HZ441K": {
     "no_availability_all_day": false,
-    "conflict_tijden": "10:15–17:45"
+    "conflict_tijden": "10:15–19:00"
   },
   "L286XX": {
     "no_availability_all_day": true,
@@ -2177,7 +2177,7 @@
   },
   "NN998V": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–18:45"
   },
   "GV169V": {
     "no_availability_all_day": false,
@@ -2325,7 +2325,7 @@
   },
   "N219LX": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:45–16:15"
+    "conflict_tijden": "09:00–16:30"
   },
   "L294XX": {
     "no_availability_all_day": false,
@@ -3225,7 +3225,7 @@
   },
   "T223BR": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:45–15:15"
   },
   "PX448P": {
     "no_availability_all_day": false,
@@ -3673,7 +3673,7 @@
   },
   "N074SV": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–17:30"
   },
   "HGK76T": {
     "no_availability_all_day": false,
@@ -3765,7 +3765,7 @@
   },
   "HS782K": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:15–15:45"
   },
   "ZF121R": {
     "no_availability_all_day": false,
@@ -3805,7 +3805,7 @@
   },
   "T809RT": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–18:45"
   },
   "HS793K": {
     "no_availability_all_day": false,
@@ -4477,7 +4477,7 @@
   },
   "PX472P": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:00–19:00"
   },
   "H060FJ": {
     "no_availability_all_day": false,
@@ -5085,7 +5085,7 @@
   },
   "JD852D": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–10:45"
   },
   "NN995V": {
     "no_availability_all_day": false,
@@ -6581,7 +6581,7 @@
   },
   "T881XX": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:15–16:45"
+    "conflict_tijden": "11:15–16:45"
   },
   "T913RT": {
     "no_availability_all_day": false,
@@ -7461,7 +7461,7 @@
   },
   "RS840V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:00–09:30, 15:15–18:15"
+    "conflict_tijden": "07:45–09:30, 15:15–18:15"
   },
   "PJ445T": {
     "no_availability_all_day": false,
@@ -7853,7 +7853,7 @@
   },
   "NF377K": {
     "no_availability_all_day": false,
-    "conflict_tijden": "12:45–16:15"
+    "conflict_tijden": "09:00–10:45, 12:45–16:15"
   },
   "JR726R": {
     "no_availability_all_day": false,
@@ -7981,7 +7981,7 @@
   },
   "PJ460T": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "17:45–19:00"
   },
   "R065GT": {
     "no_availability_all_day": false,
@@ -8453,7 +8453,7 @@
   },
   "73ZBZ7": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:30–13:30"
   },
   "HZ447K": {
     "no_availability_all_day": false,
@@ -8461,7 +8461,7 @@
   },
   "SF657T": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:30–13:30"
+    "conflict_tijden": ""
   },
   "JN465J": {
     "no_availability_all_day": true,
@@ -8925,7 +8925,7 @@
   },
   "RN371P": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:00–13:00"
   },
   "HHJ02S": {
     "no_availability_all_day": true,
@@ -10952,8 +10952,8 @@
     "conflict_tijden": ""
   },
   "J244ZN": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:45–19:00"
   },
   "L338TL": {
     "no_availability_all_day": false,
@@ -11129,7 +11129,7 @@
   },
   "R927TR": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:15–12:45"
+    "conflict_tijden": "12:45–13:45"
   },
   "JX966S": {
     "no_availability_all_day": false,
@@ -12193,7 +12193,7 @@
   },
   "SF653T": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:45–10:45"
   },
   "SF647T": {
     "no_availability_all_day": false,
