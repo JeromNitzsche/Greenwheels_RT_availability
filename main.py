@@ -73,6 +73,8 @@ def update_availability(request):
 
     conflict_dict = {}
     car_metadata = {}
+    conflict_blocks_seen = set()
+
     for start, end in blocks:
         variables = {
             "period": {
@@ -116,6 +118,32 @@ def update_availability(request):
                     }
                 if not available:
                     conflict_dict.setdefault(car_id, []).append((start, end))
+                    conflict_blocks_seen.add((start, end))
+
+    # Herhaal ontbrekende blokken (bijv. 15:15–15:30) als die nergens voorkwamen
+    missing_blocks = set(blocks) - conflict_blocks_seen
+    for start, end in missing_blocks:
+        logger.warning(f"Blok {start}–{end} mist overal – opnieuw ophalen")
+        variables = {
+            "period": {
+                "startTime": int(start.timestamp() * 1000),
+                "endTime": int(end.timestamp() * 1000)
+            }
+        }
+        payload = {
+            "operationName": "Locations",
+            "query": GRAPHQL_QUERY,
+            "variables": variables
+        }
+        try:
+            resp = httpx.post(GRAPHQL_URL, headers=HEADERS, json=payload)
+            locations = resp.json().get("data", {}).get("locations", [])
+            for loc in locations:
+                for car in loc.get("cars", []):
+                    if not car.get("availability", {}).get("available", True):
+                        conflict_dict.setdefault(car["id"], []).append((start, end))
+        except Exception as e:
+            logger.error(f"Herhaalverzoek voor blok {start}–{end} mislukt: {e}")
 
     def merge_blocks(blocks):
         if not blocks:
@@ -149,13 +177,24 @@ def update_availability(request):
                     free_period_found = True
                     break
             current_time = max(current_time, e)
-        # Check of er nog tijd over is na het laatste conflict
         if current_time < end_of_day:
             remaining_time = end_of_day - current_time
             if remaining_time >= timedelta(minutes=30):
                 free_period_found = True
 
         no_availability_all_day = not free_period_found
+
+        # Corrigeer marges alleen als auto niet volledig bezet is
+        if not no_availability_all_day:
+            corrected_conflicts = []
+            for s, e in conflicts:
+                corrected_start = s
+                corrected_end = e - timedelta(minutes=15)
+                if s > start_dt:
+                    corrected_start = s + timedelta(minutes=15)
+                if corrected_end > corrected_start:
+                    corrected_conflicts.append((corrected_start, corrected_end))
+            conflicts = corrected_conflicts
 
         rows.append({
             "license": meta["license"],
