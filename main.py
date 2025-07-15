@@ -186,15 +186,17 @@ def update_availability(request):
 
         # Corrigeer marges alleen als auto niet volledig bezet is
         if not no_availability_all_day:
-            corrected_conflicts = []
-            for s, e in conflicts:
-                corrected_start = s
-                corrected_end = e - timedelta(minutes=15)
-                if s > start_dt:
-                    corrected_start = s + timedelta(minutes=15)
-                if corrected_end > corrected_start:
-                    corrected_conflicts.append((corrected_start, corrected_end))
-            conflicts = corrected_conflicts
+                corrected_conflicts = []
+                for s, e in conflicts:
+                    corrected_start = s
+                    corrected_end = e
+                    if e < end_of_day:
+                        corrected_end = e - timedelta(minutes=15)
+                    if s > start_dt:
+                        corrected_start = s + timedelta(minutes=15)
+                    if corrected_end > corrected_start:
+                        corrected_conflicts.append((corrected_start, corrected_end))
+                conflicts = corrected_conflicts
 
         rows.append({
             "license": meta["license"],
