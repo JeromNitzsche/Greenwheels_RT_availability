@@ -136,16 +136,26 @@ def update_availability(request):
     rows = []
     for car_id, meta in car_metadata.items():
         conflicts = merge_blocks(conflict_dict.get(car_id, []), tolerance_minutes=20)
-        now = datetime.now(tz=tz.gettz("Europe/Amsterdam"))
+        now = datetime.now(tz=tz.gettz("Europe/Amsterdam")).replace(second=0, microsecond=0)
         end_of_day = now.replace(hour=19, minute=0, second=0, microsecond=0)
-        cursor = now
-        free_slot_found = False
+
+        # Bepaal of er een vrije periode van minimaal 30 minuten is
+        free_period_found = False
+        current_time = now
         for s, e in conflicts:
-            if s > cursor:
-                free_slot_found = True
-                break
-            cursor = max(cursor, e)
-        no_availability_all_day = not free_slot_found
+            if s > current_time:
+                free_duration = s - current_time
+                if free_duration >= timedelta(minutes=30):
+                    free_period_found = True
+                    break
+            current_time = max(current_time, e)
+        # Check of er nog tijd over is na het laatste conflict
+        if current_time < end_of_day:
+            remaining_time = end_of_day - current_time
+            if remaining_time >= timedelta(minutes=30):
+                free_period_found = True
+
+        no_availability_all_day = not free_period_found
 
         rows.append({
             "license": meta["license"],
