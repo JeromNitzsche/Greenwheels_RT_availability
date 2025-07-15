@@ -43,14 +43,14 @@ query Locations($period: PeriodInput) {
 # ===== Instellingen =====
 BLOCK_MINUTES = 15
 END_TIME = "19:00"
-GRAPHQL_URL = "https://www.greenwheels.com/api/graphql"
+GRAPHQL_URL = os.getenv("GRAPHQL_URL")
 HEADERS = {
-    "Content-Type": "application/json",
-    "apollographql-client-name": "web",
-    "apollographql-client-version": "6.8.1.0",
-    "origin": "https://www.greenwheels.com",
-    "referer": "https://www.greenwheels.com/nl/book",
-    "user-agent": "Mozilla/5.0",
+    "Content-Type": os.getenv("HEADERS_CONTENT_TYPE"),
+    "apollographql-client-name": os.getenv("HEADERS_CLIENT_NAME"),
+    "apollographql-client-version": os.getenv("HEADERS_CLIENT_VERSION"),
+    "origin": os.getenv("HEADERS_ORIGIN"),
+    "referer": os.getenv("HEADERS_REFERER"),
+    "user-agent": os.getenv("HEADERS_USER_AGENT"),
 }
 
 # Functie om streepjes uit kentekens te verwijderen
