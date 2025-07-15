@@ -117,14 +117,14 @@ def update_availability(request):
                 if not available:
                     conflict_dict.setdefault(car_id, []).append((start, end))
 
-    def merge_blocks(blocks, tolerance_minutes=20):
+    def merge_blocks(blocks):
         if not blocks:
             return []
         blocks.sort()
         merged = [blocks[0]]
         for s, e in blocks[1:]:
             last_s, last_e = merged[-1]
-            if (s - last_e) <= timedelta(minutes=tolerance_minutes):
+            if s <= last_e:
                 merged[-1] = (last_s, max(last_e, e))
             else:
                 merged.append((s, e))
@@ -135,7 +135,7 @@ def update_availability(request):
 
     rows = []
     for car_id, meta in car_metadata.items():
-        conflicts = merge_blocks(conflict_dict.get(car_id, []), tolerance_minutes=20)
+        conflicts = merge_blocks(conflict_dict.get(car_id, []))
         now = datetime.now(tz=tz.gettz("Europe/Amsterdam")).replace(second=0, microsecond=0)
         end_of_day = now.replace(hour=19, minute=0, second=0, microsecond=0)
 
