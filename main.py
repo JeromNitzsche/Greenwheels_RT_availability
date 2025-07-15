@@ -54,10 +54,8 @@ HEADERS = {
 }
 
 # Functie om streepjes uit kentekens te verwijderen
-
 def clean_license(lic: str) -> str:
     return lic.replace("-", "")
-
 
 def update_availability(request):
     logger.info("Starting update_availability function.")
@@ -119,14 +117,14 @@ def update_availability(request):
                 if not available:
                     conflict_dict.setdefault(car_id, []).append((start, end))
 
-    def merge_blocks(blocks):
+    def merge_blocks(blocks, tolerance_minutes=20):
         if not blocks:
             return []
         blocks.sort()
         merged = [blocks[0]]
         for s, e in blocks[1:]:
             last_s, last_e = merged[-1]
-            if s <= last_e:
+            if (s - last_e) <= timedelta(minutes=tolerance_minutes):
                 merged[-1] = (last_s, max(last_e, e))
             else:
                 merged.append((s, e))
@@ -137,20 +135,21 @@ def update_availability(request):
 
     rows = []
     for car_id, meta in car_metadata.items():
-        conflicts = merge_blocks(conflict_dict.get(car_id, []))
+        conflicts = merge_blocks(conflict_dict.get(car_id, []), tolerance_minutes=20)
         now = datetime.now(tz=tz.gettz("Europe/Amsterdam"))
         end_of_day = now.replace(hour=19, minute=0, second=0, microsecond=0)
         cursor = now
-        free_slot = True
+        free_slot_found = False
         for s, e in conflicts:
             if s > cursor:
+                free_slot_found = True
                 break
             cursor = max(cursor, e)
-        if cursor >= end_of_day:
-            free_slot = False
+        no_availability_all_day = not free_slot_found
+
         rows.append({
             "license": meta["license"],
-            "no_availability_all_day": not free_slot,
+            "no_availability_all_day": no_availability_all_day,
             "conflict_tijden": format_blocks(conflicts)
         })
 
@@ -167,7 +166,6 @@ def update_availability(request):
         json.dump(availability, f, ensure_ascii=False, indent=2)
 
     logger.info(f"availability.json opgeslagen in: {output_path}")
-
     logger.info("Availability update completed successfully.")
 
 if __name__ == "__main__":
