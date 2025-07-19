@@ -757,7 +757,7 @@
   },
   "HGH65V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:45–10:30"
+    "conflict_tijden": ""
   },
   "H197TR": {
     "no_availability_all_day": false,
@@ -1476,8 +1476,8 @@
     "conflict_tijden": ""
   },
   "JS546V": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "07:45–14:15"
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:45–19:00"
   },
   "NF373K": {
     "no_availability_all_day": false,
@@ -1905,7 +1905,7 @@
   },
   "S407LF": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–12:00"
   },
   "N965LH": {
     "no_availability_all_day": false,
@@ -2977,7 +2977,7 @@
   },
   "NV064V": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–13:00"
   },
   "ZD830J": {
     "no_availability_all_day": false,
@@ -5797,7 +5797,7 @@
   },
   "NL946V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "13:30–19:00"
+    "conflict_tijden": "07:45–12:00, 13:30–19:00"
   },
   "G295KB": {
     "no_availability_all_day": true,
@@ -9292,8 +9292,8 @@
     "conflict_tijden": ""
   },
   "T754SZ": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "09:30–18:30"
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:45–18:45"
   },
   "T471GJ": {
     "no_availability_all_day": false,
@@ -9469,7 +9469,7 @@
   },
   "PP472N": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:15–12:30"
   },
   "J851VV": {
     "no_availability_all_day": false,
@@ -9729,7 +9729,7 @@
   },
   "HH807P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:00–19:00"
+    "conflict_tijden": "12:30–19:00"
   },
   "VFK89P": {
     "no_availability_all_day": false,
@@ -12013,7 +12013,7 @@
   },
   "P798TH": {
     "no_availability_all_day": false,
-    "conflict_tijden": "10:30–13:00"
+    "conflict_tijden": ""
   },
   "TS755N": {
     "no_availability_all_day": false,
