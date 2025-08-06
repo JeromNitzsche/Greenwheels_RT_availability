@@ -497,7 +497,7 @@
   },
   "RT497V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:45–18:15"
+    "conflict_tijden": ""
   },
   "R763KN": {
     "no_availability_all_day": false,
@@ -1113,7 +1113,7 @@
   },
   "TN948S": {
     "no_availability_all_day": false,
-    "conflict_tijden": "10:15–14:00"
+    "conflict_tijden": "10:30–13:00"
   },
   "HH542J": {
     "no_availability_all_day": true,
@@ -1173,7 +1173,7 @@
   },
   "N222LX": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "11:00–16:30"
   },
   "S440HG": {
     "no_availability_all_day": false,
@@ -1285,7 +1285,7 @@
   },
   "P328DP": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "10:15–12:15"
   },
   "GN121B": {
     "no_availability_all_day": false,
@@ -1521,7 +1521,7 @@
   },
   "H080VZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "10:30–16:15"
   },
   "HLD90X": {
     "no_availability_all_day": true,
@@ -1641,7 +1641,7 @@
   },
   "R306SH": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:45–10:30"
+    "conflict_tijden": ""
   },
   "SH829D": {
     "no_availability_all_day": false,
@@ -4957,7 +4957,7 @@
   },
   "RZ787T": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:45–10:30"
+    "conflict_tijden": ""
   },
   "HH431R": {
     "no_availability_all_day": false,
@@ -5077,7 +5077,7 @@
   },
   "JT255L": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:45–10:30"
+    "conflict_tijden": ""
   },
   "L912TR": {
     "no_availability_all_day": false,
@@ -5559,6 +5559,10 @@
     "no_availability_all_day": false,
     "conflict_tijden": "09:45–16:00"
   },
+  "HXD54V": {
+    "no_availability_all_day": true,
+    "conflict_tijden": "09:45–19:00"
+  },
   "P796ZT": {
     "no_availability_all_day": false,
     "conflict_tijden": ""
@@ -5681,7 +5685,7 @@
   },
   "JD840D": {
     "no_availability_all_day": false,
-    "conflict_tijden": "11:30–14:30"
+    "conflict_tijden": ""
   },
   "JL657V": {
     "no_availability_all_day": false,
@@ -6277,7 +6281,7 @@
   },
   "Z671RJ": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:45–17:30"
   },
   "GFF04J": {
     "no_availability_all_day": false,
@@ -9159,9 +9163,9 @@
     "no_availability_all_day": false,
     "conflict_tijden": ""
   },
-  "GBB28S": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "09:45–16:30"
+  "HXJ33B": {
+    "no_availability_all_day": true,
+    "conflict_tijden": "09:45–19:00"
   },
   "GRD29T": {
     "no_availability_all_day": false,
@@ -9392,8 +9396,8 @@
     "conflict_tijden": "09:45–19:00"
   },
   "GDZ45P": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "18:30–19:00"
+    "no_availability_all_day": true,
+    "conflict_tijden": "09:45–19:00"
   },
   "PR339F": {
     "no_availability_all_day": false,
@@ -9533,7 +9537,7 @@
   },
   "T559SZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "09:45–10:00"
+    "conflict_tijden": ""
   },
   "ZD836J": {
     "no_availability_all_day": false,
@@ -9741,7 +9745,7 @@
   },
   "L271XX": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "12:00–19:00"
   },
   "HJD30J": {
     "no_availability_all_day": true,
@@ -10098,6 +10102,10 @@
   "GT449L": {
     "no_availability_all_day": false,
     "conflict_tijden": "12:15–18:30"
+  },
+  "GBB28S": {
+    "no_availability_all_day": false,
+    "conflict_tijden": "09:45–10:00"
   },
   "J250ZN": {
     "no_availability_all_day": false,
@@ -10933,7 +10941,7 @@
   },
   "HZ450K": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "13:30–16:30"
   },
   "V414ZH": {
     "no_availability_all_day": true,
@@ -12065,7 +12073,7 @@
   },
   "RT517V": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "18:15–19:00"
   },
   "R172RX": {
     "no_availability_all_day": false,
