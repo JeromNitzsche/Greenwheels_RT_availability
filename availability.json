@@ -1009,7 +1009,7 @@
   },
   "42ZBZ8": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:00–18:00"
+    "conflict_tijden": "07:15–17:30"
   },
   "S174VV": {
     "no_availability_all_day": false,
@@ -4157,7 +4157,7 @@
   },
   "KH079P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "06:45–07:00, 13:00–17:00, 18:00–19:00"
+    "conflict_tijden": "13:00–17:00, 18:00–19:00"
   },
   "JB495N": {
     "no_availability_all_day": false,
@@ -7313,7 +7313,7 @@
   },
   "R526TZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:30–17:30"
+    "conflict_tijden": "07:15–17:30"
   },
   "K513HN": {
     "no_availability_all_day": true,
@@ -7848,8 +7848,8 @@
     "conflict_tijden": "06:45–19:00"
   },
   "RT495V": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:45–19:00"
   },
   "JL661V": {
     "no_availability_all_day": false,
@@ -7953,7 +7953,7 @@
   },
   "JB487N": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "10:30–16:30"
   },
   "SL054K": {
     "no_availability_all_day": false,
@@ -8941,7 +8941,7 @@
   },
   "ZD821J": {
     "no_availability_all_day": false,
-    "conflict_tijden": "06:45–07:00"
+    "conflict_tijden": ""
   },
   "ZF830H": {
     "no_availability_all_day": true,
@@ -9857,7 +9857,7 @@
   },
   "HFS96V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "11:00–16:30"
+    "conflict_tijden": ""
   },
   "T981RT": {
     "no_availability_all_day": false,
@@ -11393,7 +11393,7 @@
   },
   "NV298T": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:15–11:00"
   },
   "RS831V": {
     "no_availability_all_day": false,
