@@ -1336,8 +1336,8 @@
     "conflict_tijden": "06:45–19:00"
   },
   "PT751G": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:45–19:00"
   },
   "T239VT": {
     "no_availability_all_day": true,
@@ -2220,8 +2220,8 @@
     "conflict_tijden": ""
   },
   "T475GJ": {
-    "no_availability_all_day": true,
-    "conflict_tijden": "06:45–19:00"
+    "no_availability_all_day": false,
+    "conflict_tijden": ""
   },
   "JX946S": {
     "no_availability_all_day": false,
