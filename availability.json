@@ -149,7 +149,7 @@
   },
   "H362HH": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:15–10:00"
   },
   "PX489P": {
     "no_availability_all_day": false,
@@ -2308,8 +2308,8 @@
     "conflict_tijden": ""
   },
   "JX992S": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:15–19:00"
   },
   "P742XR": {
     "no_availability_all_day": true,
@@ -4945,7 +4945,7 @@
   },
   "JN442J": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:30–12:00"
   },
   "RZ787T": {
     "no_availability_all_day": false,
@@ -5045,7 +5045,7 @@
   },
   "GV174V": {
     "no_availability_all_day": true,
-    "conflict_tijden": "07:00–19:00"
+    "conflict_tijden": "06:45–19:00"
   },
   "5TLL70": {
     "no_availability_all_day": false,
@@ -5968,8 +5968,8 @@
     "conflict_tijden": ""
   },
   "H372HH": {
-    "no_availability_all_day": true,
-    "conflict_tijden": "07:15–19:00"
+    "no_availability_all_day": false,
+    "conflict_tijden": ""
   },
   "JN450J": {
     "no_availability_all_day": false,
@@ -6137,7 +6137,7 @@
   },
   "T279RR": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "18:30–19:00"
   },
   "HGB87V": {
     "no_availability_all_day": false,
@@ -7344,8 +7344,8 @@
     "conflict_tijden": "06:45–19:00"
   },
   "HH808P": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "08:00–19:00"
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:45–19:00"
   },
   "SK812H": {
     "no_availability_all_day": false,
@@ -8721,7 +8721,7 @@
   },
   "H071VZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "10:30–12:30, 16:00–18:30"
+    "conflict_tijden": "07:45–09:15, 10:30–12:30, 16:00–18:30"
   },
   "JL653V": {
     "no_availability_all_day": false,
@@ -9081,7 +9081,7 @@
   },
   "HXD83Z": {
     "no_availability_all_day": true,
-    "conflict_tijden": "06:45–19:00"
+    "conflict_tijden": "06:45–12:30, 12:45–19:00"
   },
   "S388HG": {
     "no_availability_all_day": false,
