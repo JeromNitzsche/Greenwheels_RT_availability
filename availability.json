@@ -229,7 +229,7 @@
   },
   "HF203P": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:00–15:00"
   },
   "NX084F": {
     "no_availability_all_day": false,
@@ -4009,7 +4009,7 @@
   },
   "JF389F": {
     "no_availability_all_day": false,
-    "conflict_tijden": "12:00–15:00"
+    "conflict_tijden": "06:45–10:00, 12:00–15:00"
   },
   "RX312K": {
     "no_availability_all_day": false,
@@ -4260,8 +4260,8 @@
     "conflict_tijden": ""
   },
   "L911TR": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:45–19:00"
   },
   "PT756G": {
     "no_availability_all_day": false,
@@ -5740,8 +5740,8 @@
     "conflict_tijden": ""
   },
   "JG536K": {
-    "no_availability_all_day": true,
-    "conflict_tijden": "07:15–19:00"
+    "no_availability_all_day": false,
+    "conflict_tijden": "09:45–19:00"
   },
   "G338VX": {
     "no_availability_all_day": false,
@@ -6129,7 +6129,7 @@
   },
   "HFS87Z": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "06:45–08:30"
   },
   "X640XX": {
     "no_availability_all_day": true,
@@ -6453,7 +6453,7 @@
   },
   "HB384P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:15–17:15"
+    "conflict_tijden": "06:45–17:15"
   },
   "JX930S": {
     "no_availability_all_day": false,
@@ -6689,7 +6689,7 @@
   },
   "JJ920T": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "06:45–17:00"
   },
   "N966LH": {
     "no_availability_all_day": false,
@@ -7872,8 +7872,8 @@
     "conflict_tijden": ""
   },
   "SF649T": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:00–19:00"
   },
   "GN118B": {
     "no_availability_all_day": false,
@@ -8129,7 +8129,7 @@
   },
   "PX443P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "11:00–18:00"
+    "conflict_tijden": "08:15–10:15, 11:00–18:00"
   },
   "RN399P": {
     "no_availability_all_day": true,
