@@ -5369,7 +5369,7 @@
   },
   "RN359P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "06:15–12:15"
+    "conflict_tijden": "05:45–12:15"
   },
   "H170SZ": {
     "no_availability_all_day": true,
@@ -8097,7 +8097,7 @@
   },
   "K722DB": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:00–13:00"
   },
   "P391NS": {
     "no_availability_all_day": false,
@@ -12448,8 +12448,8 @@
     "conflict_tijden": "13:30–17:30"
   },
   "HH817P": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "05:45–06:00"
+    "no_availability_all_day": true,
+    "conflict_tijden": "05:45–19:00"
   },
   "L387PG": {
     "no_availability_all_day": true,
