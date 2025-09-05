@@ -10696,8 +10696,8 @@
     "conflict_tijden": "07:45–18:30"
   },
   "RX291K": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:15–19:00"
   },
   "ZH434B": {
     "no_availability_all_day": false,
@@ -12297,7 +12297,7 @@
   },
   "GP698X": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "07:45–19:00"
   },
   "5TLL71": {
     "no_availability_all_day": false,
