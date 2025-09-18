@@ -64,10 +64,9 @@ def update_availability(request):
     minute_block = (now.minute // 15) * 15
     start_dt = now.replace(minute=0) + timedelta(minutes=minute_block)
 
-    # Dynamische eindtijd = altijd 10 uur vooruit
+    # Dynamische eindtijd: altijd 10 uur vooruit
     end_dt = now + timedelta(hours=10)
 
-    # Maak de blokken
     block_delta = timedelta(minutes=BLOCK_MINUTES)
     blocks = []
     current = start_dt
@@ -94,9 +93,6 @@ def update_availability(request):
         try:
             logger.info(f"Fetching data for time block: {start} to {end}")
             resp = httpx.post(GRAPHQL_URL, headers=HEADERS, json=payload)
-            if resp.status_code != 200:
-                logger.error(f"Bad response {resp.status_code}: {resp.text}")
-                continue
             locations = resp.json().get("data", {}).get("locations", [])
             logger.info(f"Fetched {len(locations)} locations")
         except Exception as e:
@@ -127,7 +123,7 @@ def update_availability(request):
                     conflict_dict.setdefault(car_id, []).append((start, end))
                     conflict_blocks_seen.add((start, end))
 
-    # Herhaal ontbrekende blokken (bijv. lege respons)
+    # Herhaal ontbrekende blokken
     missing_blocks = set(blocks) - conflict_blocks_seen
     for start, end in missing_blocks:
         logger.warning(f"Blok {start}–{end} mist overal – opnieuw ophalen")
@@ -144,9 +140,6 @@ def update_availability(request):
         }
         try:
             resp = httpx.post(GRAPHQL_URL, headers=HEADERS, json=payload)
-            if resp.status_code != 200:
-                logger.error(f"Bad response {resp.status_code}: {resp.text}")
-                continue
             locations = resp.json().get("data", {}).get("locations", [])
             for loc in locations:
                 for car in loc.get("cars", []):
@@ -175,7 +168,7 @@ def update_availability(request):
     for car_id, meta in car_metadata.items():
         conflicts = merge_blocks(conflict_dict.get(car_id, []))
 
-        # Bepaal of er een vrije periode van minimaal 30 minuten is binnen 10 uur
+        # Bepaal of er een vrije periode van minimaal 30 minuten is binnen het 10u-venster
         free_period_found = False
         current_time = now
         for s, e in conflicts:
@@ -226,7 +219,6 @@ def update_availability(request):
 
     logger.info(f"availability.json opgeslagen in: {output_path}")
     logger.info("Availability update completed successfully.")
-    return make_response(("OK", 200))
 
 if __name__ == "__main__":
     update_availability(None)
