@@ -42,7 +42,6 @@ query Locations($period: PeriodInput) {
 
 # ===== Instellingen =====
 BLOCK_MINUTES = 15
-END_TIME = "19:00"
 GRAPHQL_URL = os.getenv("GRAPHQL_URL")
 HEADERS = {
     "Content-Type": os.getenv("HEADERS_CONTENT_TYPE"),
@@ -60,10 +59,15 @@ def clean_license(lic: str) -> str:
 def update_availability(request):
     logger.info("Starting update_availability function.")
     now = datetime.now(tz=tz.gettz("Europe/Amsterdam")).replace(second=0, microsecond=0)
+
+    # Starttijd afronden op 15-minuten blok
     minute_block = (now.minute // 15) * 15
     start_dt = now.replace(minute=0) + timedelta(minutes=minute_block)
-    end_dt = now.replace(hour=19, minute=0, second=0, microsecond=0)
 
+    # Dynamische eindtijd = altijd 10 uur vooruit
+    end_dt = now + timedelta(hours=10)
+
+    # Maak de blokken
     block_delta = timedelta(minutes=BLOCK_MINUTES)
     blocks = []
     current = start_dt
@@ -90,6 +94,9 @@ def update_availability(request):
         try:
             logger.info(f"Fetching data for time block: {start} to {end}")
             resp = httpx.post(GRAPHQL_URL, headers=HEADERS, json=payload)
+            if resp.status_code != 200:
+                logger.error(f"Bad response {resp.status_code}: {resp.text}")
+                continue
             locations = resp.json().get("data", {}).get("locations", [])
             logger.info(f"Fetched {len(locations)} locations")
         except Exception as e:
@@ -120,7 +127,7 @@ def update_availability(request):
                     conflict_dict.setdefault(car_id, []).append((start, end))
                     conflict_blocks_seen.add((start, end))
 
-    # Herhaal ontbrekende blokken (bijv. 15:15–15:30) als die nergens voorkwamen
+    # Herhaal ontbrekende blokken (bijv. lege respons)
     missing_blocks = set(blocks) - conflict_blocks_seen
     for start, end in missing_blocks:
         logger.warning(f"Blok {start}–{end} mist overal – opnieuw ophalen")
@@ -137,6 +144,9 @@ def update_availability(request):
         }
         try:
             resp = httpx.post(GRAPHQL_URL, headers=HEADERS, json=payload)
+            if resp.status_code != 200:
+                logger.error(f"Bad response {resp.status_code}: {resp.text}")
+                continue
             locations = resp.json().get("data", {}).get("locations", [])
             for loc in locations:
                 for car in loc.get("cars", []):
@@ -164,10 +174,8 @@ def update_availability(request):
     rows = []
     for car_id, meta in car_metadata.items():
         conflicts = merge_blocks(conflict_dict.get(car_id, []))
-        now = datetime.now(tz=tz.gettz("Europe/Amsterdam")).replace(second=0, microsecond=0)
-        end_of_day = now.replace(hour=19, minute=0, second=0, microsecond=0)
 
-        # Bepaal of er een vrije periode van minimaal 30 minuten is
+        # Bepaal of er een vrije periode van minimaal 30 minuten is binnen 10 uur
         free_period_found = False
         current_time = now
         for s, e in conflicts:
@@ -177,8 +185,8 @@ def update_availability(request):
                     free_period_found = True
                     break
             current_time = max(current_time, e)
-        if current_time < end_of_day:
-            remaining_time = end_of_day - current_time
+        if current_time < end_dt:
+            remaining_time = end_dt - current_time
             if remaining_time >= timedelta(minutes=30):
                 free_period_found = True
 
@@ -186,17 +194,17 @@ def update_availability(request):
 
         # Corrigeer marges alleen als auto niet volledig bezet is
         if not no_availability_all_day:
-                corrected_conflicts = []
-                for s, e in conflicts:
-                    corrected_start = s
-                    corrected_end = e
-                    if e < end_of_day:
-                        corrected_end = e - timedelta(minutes=15)
-                    if s > start_dt:
-                        corrected_start = s + timedelta(minutes=15)
-                    if corrected_end > corrected_start:
-                        corrected_conflicts.append((corrected_start, corrected_end))
-                conflicts = corrected_conflicts
+            corrected_conflicts = []
+            for s, e in conflicts:
+                corrected_start = s
+                corrected_end = e
+                if e < end_dt:
+                    corrected_end = e - timedelta(minutes=15)
+                if s > start_dt:
+                    corrected_start = s + timedelta(minutes=15)
+                if corrected_end > corrected_start:
+                    corrected_conflicts.append((corrected_start, corrected_end))
+            conflicts = corrected_conflicts
 
         rows.append({
             "license": meta["license"],
@@ -218,6 +226,7 @@ def update_availability(request):
 
     logger.info(f"availability.json opgeslagen in: {output_path}")
     logger.info("Availability update completed successfully.")
+    return make_response(("OK", 200))
 
 if __name__ == "__main__":
     update_availability(None)
