@@ -3848,8 +3848,8 @@
     "conflict_tijden": ""
   },
   "T242BF": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:15–16:00"
   },
   "GPZ60P": {
     "no_availability_all_day": false,
@@ -9421,7 +9421,7 @@
   },
   "GRD29T": {
     "no_availability_all_day": false,
-    "conflict_tijden": "05:45–06:00"
+    "conflict_tijden": ""
   },
   "S581JD": {
     "no_availability_all_day": false,
