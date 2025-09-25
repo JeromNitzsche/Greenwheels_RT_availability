@@ -2340,8 +2340,8 @@
     "conflict_tijden": "15:00–17:00"
   },
   "L272XX": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "07:45–17:00"
+    "no_availability_all_day": true,
+    "conflict_tijden": "07:15–17:00"
   },
   "L291XX": {
     "no_availability_all_day": false,
@@ -5397,7 +5397,7 @@
   },
   "JX948S": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:30–11:15"
   },
   "P646XH": {
     "no_availability_all_day": false,
@@ -12721,7 +12721,7 @@
   },
   "R440KK": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:00–17:00"
   },
   "RS822V": {
     "no_availability_all_day": false,
