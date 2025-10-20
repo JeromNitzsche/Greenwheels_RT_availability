@@ -1581,7 +1581,7 @@
   },
   "P934NS": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–00:00"
+    "conflict_tijden": ""
   },
   "JV379B": {
     "no_availability_all_day": false,
@@ -1884,8 +1884,8 @@
     "conflict_tijden": "23:45–10:00"
   },
   "PJ808Z": {
-    "no_availability_all_day": true,
-    "conflict_tijden": "23:45–10:00"
+    "no_availability_all_day": false,
+    "conflict_tijden": ""
   },
   "JG534K": {
     "no_availability_all_day": false,
@@ -2069,7 +2069,7 @@
   },
   "J389ZZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–01:30"
+    "conflict_tijden": ""
   },
   "R110VL": {
     "no_availability_all_day": false,
@@ -7329,7 +7329,7 @@
   },
   "J647VJ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–01:00, 06:30–10:00"
+    "conflict_tijden": "06:30–10:00"
   },
   "5TLL74": {
     "no_availability_all_day": false,
@@ -8273,7 +8273,7 @@
   },
   "GT453L": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–00:45"
+    "conflict_tijden": ""
   },
   "J384ZZ": {
     "no_availability_all_day": false,
@@ -8705,7 +8705,7 @@
   },
   "S774PD": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:30–10:00"
+    "conflict_tijden": ""
   },
   "JJ400L": {
     "no_availability_all_day": false,
@@ -8749,7 +8749,7 @@
   },
   "N216LX": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:30–10:00"
   },
   "PR324F": {
     "no_availability_all_day": false,
@@ -9441,7 +9441,7 @@
   },
   "L259XX": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:30–10:00"
   },
   "T556SZ": {
     "no_availability_all_day": false,
@@ -10989,7 +10989,7 @@
   },
   "TB055N": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–01:00"
+    "conflict_tijden": ""
   },
   "GFF99H": {
     "no_availability_all_day": false,
@@ -13001,7 +13001,7 @@
   },
   "SK831H": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "23:45–00:15"
   },
   "KJ535B": {
     "no_availability_all_day": false,
