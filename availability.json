@@ -4200,8 +4200,8 @@
     "conflict_tijden": ""
   },
   "TX232N": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "00:30–10:45"
   },
   "RT494V": {
     "no_availability_all_day": false,
@@ -8089,7 +8089,7 @@
   },
   "PP067J": {
     "no_availability_all_day": false,
-    "conflict_tijden": "00:30–00:45"
+    "conflict_tijden": ""
   },
   "TV822B": {
     "no_availability_all_day": false,
