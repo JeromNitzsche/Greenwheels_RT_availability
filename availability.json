@@ -417,7 +417,7 @@
   },
   "P331DP": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:45–16:00"
+    "conflict_tijden": ""
   },
   "NF400K": {
     "no_availability_all_day": false,
@@ -1956,8 +1956,8 @@
     "conflict_tijden": ""
   },
   "JR729R": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "06:15–16:00"
   },
   "P985TG": {
     "no_availability_all_day": true,
@@ -9765,7 +9765,7 @@
   },
   "L278XX": {
     "no_availability_all_day": false,
-    "conflict_tijden": "05:45–07:00"
+    "conflict_tijden": ""
   },
   "T754SZ": {
     "no_availability_all_day": false,
