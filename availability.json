@@ -736,8 +736,8 @@
     "conflict_tijden": "08:00–16:00"
   },
   "T978RT": {
-    "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "no_availability_all_day": true,
+    "conflict_tijden": "05:45–16:00"
   },
   "T274RR": {
     "no_availability_all_day": false,
@@ -8365,7 +8365,7 @@
   },
   "PB504D": {
     "no_availability_all_day": false,
-    "conflict_tijden": "05:45–06:15"
+    "conflict_tijden": ""
   },
   "R987GS": {
     "no_availability_all_day": true,
@@ -10797,7 +10797,7 @@
   },
   "JV380B": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "09:15–13:15"
   },
   "NK433P": {
     "no_availability_all_day": false,
