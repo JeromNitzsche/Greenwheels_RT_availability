@@ -573,7 +573,7 @@
   },
   "GN939G": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:30"
+    "conflict_tijden": ""
   },
   "NF387K": {
     "no_availability_all_day": false,
@@ -613,7 +613,7 @@
   },
   "S568PH": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–22:45"
+    "conflict_tijden": ""
   },
   "S089VF": {
     "no_availability_all_day": false,
@@ -753,7 +753,7 @@
   },
   "T411KD": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–22:45"
+    "conflict_tijden": ""
   },
   "T971RT": {
     "no_availability_all_day": false,
@@ -1333,7 +1333,7 @@
   },
   "L249XX": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–22:45"
+    "conflict_tijden": "22:30–23:00"
   },
   "PT751G": {
     "no_availability_all_day": false,
@@ -1949,7 +1949,7 @@
   },
   "VFK83P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–01:00"
+    "conflict_tijden": ""
   },
   "JR729R": {
     "no_availability_all_day": false,
@@ -2452,8 +2452,8 @@
     "conflict_tijden": ""
   },
   "T757SZ": {
-    "no_availability_all_day": false,
-    "conflict_tijden": "22:30–22:45"
+    "no_availability_all_day": true,
+    "conflict_tijden": "22:30–08:45"
   },
   "HH432R": {
     "no_availability_all_day": false,
@@ -3141,7 +3141,7 @@
   },
   "RS838V": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "08:30–08:45"
   },
   "GN127B": {
     "no_availability_all_day": false,
@@ -3169,7 +3169,7 @@
   },
   "S068HS": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:00–23:45"
+    "conflict_tijden": "22:30–23:45"
   },
   "JJ405L": {
     "no_availability_all_day": false,
@@ -5041,7 +5041,7 @@
   },
   "GT446L": {
     "no_availability_all_day": false,
-    "conflict_tijden": "00:30–06:00"
+    "conflict_tijden": "22:30–07:00"
   },
   "JD835D": {
     "no_availability_all_day": false,
@@ -6321,7 +6321,7 @@
   },
   "N334FT": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "22:30–23:45"
   },
   "L823JL": {
     "no_availability_all_day": false,
@@ -6477,7 +6477,7 @@
   },
   "JL642V": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:15"
+    "conflict_tijden": "22:30–00:45"
   },
   "P213LR": {
     "no_availability_all_day": false,
@@ -6657,7 +6657,7 @@
   },
   "SL048K": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:00"
+    "conflict_tijden": "22:30–23:15"
   },
   "ZV874R": {
     "no_availability_all_day": true,
@@ -8285,7 +8285,7 @@
   },
   "K722DB": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:30"
+    "conflict_tijden": ""
   },
   "P391NS": {
     "no_availability_all_day": false,
@@ -9265,7 +9265,7 @@
   },
   "JX999S": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:30"
+    "conflict_tijden": "22:30–23:45"
   },
   "L933BJ": {
     "no_availability_all_day": true,
@@ -10949,7 +10949,7 @@
   },
   "T878SZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:00"
+    "conflict_tijden": ""
   },
   "N756SF": {
     "no_availability_all_day": true,
@@ -11825,7 +11825,7 @@
   },
   "JJ417L": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:30"
+    "conflict_tijden": "22:30–00:30"
   },
   "PX446P": {
     "no_availability_all_day": false,
@@ -11873,7 +11873,7 @@
   },
   "L927GH": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:00"
+    "conflict_tijden": "22:30–23:15"
   },
   "PS176B": {
     "no_availability_all_day": false,
@@ -12133,7 +12133,7 @@
   },
   "T252BF": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–22:45"
+    "conflict_tijden": "05:30–08:45"
   },
   "K556KV": {
     "no_availability_all_day": false,
@@ -12909,7 +12909,7 @@
   },
   "RZ813T": {
     "no_availability_all_day": false,
-    "conflict_tijden": "22:30–23:00"
+    "conflict_tijden": "22:30–23:15"
   },
   "H083VZ": {
     "no_availability_all_day": true,
