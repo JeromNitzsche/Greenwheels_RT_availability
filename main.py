@@ -47,7 +47,7 @@ HEADERS = {
     "Content-Type": "application/json",
     "Accept": "application/graphql-response+json,application/json;q=0.9",
     "apollographql-client-name": "web",
-    "apollographql-client-version": "v5.28.17",
+    "apollographql-client-version": "v5.30.2",
     "origin": "https://www.greenwheels.com",
     "referer": "https://www.greenwheels.com/book",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
