@@ -1829,7 +1829,7 @@
   },
   "TN949S": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–00:45"
+    "conflict_tijden": ""
   },
   "N104SV": {
     "no_availability_all_day": true,
@@ -3697,7 +3697,7 @@
   },
   "Z382RK": {
     "no_availability_all_day": false,
-    "conflict_tijden": ""
+    "conflict_tijden": "23:45–01:00"
   },
   "L275XX": {
     "no_availability_all_day": true,
@@ -4877,7 +4877,7 @@
   },
   "SH845D": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:30–10:00"
+    "conflict_tijden": "23:45–04:00, 07:30–10:00"
   },
   "N095SV": {
     "no_availability_all_day": false,
@@ -6313,7 +6313,7 @@
   },
   "T666SZ": {
     "no_availability_all_day": false,
-    "conflict_tijden": "07:45–10:00"
+    "conflict_tijden": "23:45–02:00, 07:45–10:00"
   },
   "GRD44T": {
     "no_availability_all_day": true,
@@ -10581,7 +10581,7 @@
   },
   "S213VV": {
     "no_availability_all_day": false,
-    "conflict_tijden": "23:45–00:00"
+    "conflict_tijden": "23:45–00:30"
   },
   "GFF03J": {
     "no_availability_all_day": false,
@@ -10601,7 +10601,7 @@
   },
   "VFK84P": {
     "no_availability_all_day": false,
-    "conflict_tijden": "08:30–10:00"
+    "conflict_tijden": "07:45–10:00"
   },
   "GSL28V": {
     "no_availability_all_day": false,
