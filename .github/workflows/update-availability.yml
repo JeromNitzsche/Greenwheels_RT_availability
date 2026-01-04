@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # elke 5 minuten
-  workflow_dispatch: {}     # handmatig uitvoerbaar
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
 
 concurrency:
   group: availability-update
@@ -17,13 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GRAPHQL_URL: ${{ secrets.GRAPHQL_URL }}
-      HEADERS_CONTENT_TYPE: ${{ secrets.HEADERS_CONTENT_TYPE }}
-      HEADERS_CLIENT_NAME: ${{ secrets.HEADERS_CLIENT_NAME }}
-      HEADERS_CLIENT_VERSION: ${{ secrets.HEADERS_CLIENT_VERSION }}
-      HEADERS_ORIGIN: ${{ secrets.HEADERS_ORIGIN }}
-      HEADERS_REFERER: ${{ secrets.HEADERS_REFERER }}
-      HEADERS_USER_AGENT: ${{ secrets.HEADERS_USER_AGENT }}
+      GRAPHQL_URL: https://graphql.greenwheels.com
+      GREENWHEELS_CLIENT_VERSION: v1.0.0
 
     steps:
       - name: 🧩 Check out repository
@@ -44,10 +39,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./availability          # de map waar main.py de JSON neerzet
-          publish_branch: gh-pages             # publicatiebranch
+          publish_dir: ./availability
+          publish_branch: gh-pages
           keep_files: false
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           commit_message: "Update availability.json $(date)"
-          allow_empty_commit: true             # forceert update ook bij identieke inhoud
+          allow_empty_commit: true
